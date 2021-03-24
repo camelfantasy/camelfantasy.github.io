@@ -1,0 +1,27 @@
+body {
+    font-family: '游ゴシック',YuGothic,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,sans-serif;
+    background: linear-gradient(to right, #d3f4f85f 0%,#ffebf95f 100%);
+}
+
+.nav-link-custom {
+    transition: color 0.1s linear;
+}
+
+.nav-link-custom:hover {
+    text-decoration: none;
+}
+
+.page-item {
+    border: 0px solid black;
+    border-radius: 10px;
+    background-color: white;
+    padding: 16px;
+}
+
+.soundboard {
+    border: 0px solid black;
+    border-radius: 10px;
+    background-color: dimgray;
+    padding: 16px;
+    color: white;
+}

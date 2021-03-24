@@ -1,0 +1,80 @@
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="custom.css">
+        
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:rgb(0, 168, 107)">
+            <a class="navbar-brand" href="index.html">Camelfantasy</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom" href="kruskal-quotes.html">
+                            Kruskal Quotes
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <br>
+        <div class="container">
+            <div style="font-size:24px; font-weight:bold" align="center">Quotes from UMD Professor Kruskal</div>
+            <br>
+            <div class="soundboard">
+                <div class="row">
+                    <div class="col-lg-2 col-md-4 col-sm-6" style="padding:24px" align="center">
+                        <img src="images/button.png" style="max-width:50%; max-height:50%" onclick="play('aaaaaaaaaa.m4a')">
+                        <br>
+                        aaaaaaaaaa
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6" style="padding:24px" align="center">
+                        <img src="images/button.png" style="max-width:50%; max-height:50%" onclick="play('DrinksAndDrugs.m4a')">
+                        <br>
+                        drinks and drugs
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6" style="padding:24px" align="center">
+                        <img src="images/button.png" style="max-width:50%; max-height:50%" onclick="play('ForgetKruskal.m4a')">
+                        <br>
+                        forget kruskal
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6" style="padding:24px" align="center">
+                        <img src="images/button.png" style="max-width:50%; max-height:50%" onclick="play('KruskalProofs.m4a')">
+                        <br>
+                        proofs
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6" style="padding:24px" align="center">
+                        <img src="images/button.png" style="max-width:50%; max-height:50%" onclick="play('ShutUp.m4a')">
+                        <br>
+                        shut up
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6" style="padding:24px" align="center">
+                        <img src="images/button.png" style="max-width:50%; max-height:50%" onclick="play('SquishyComputer.m4a')">
+                        <br>
+                        squishy computer
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2 col-md-4 col-sm-6" style="padding:24px" align="center">
+                        <img src="images/button.png" style="max-width:50%; max-height:50%" onclick="play('Yes.m4a')">
+                        <br>
+                        yes
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function play(file) {
+                var audio = new Audio('audio/' + file);
+                audio.play();
+            }
+        </script>
+    </body>
+</html>
