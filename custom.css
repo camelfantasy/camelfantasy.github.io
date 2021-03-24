@@ -25,3 +25,23 @@ body {
     padding: 16px;
     color: white;
 }
+
+.twitterlink {
+    color: #1d9bf0;
+    transition: color 0.1s linear;
+}
+
+.twitterlink:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.greenlink {
+    color: rgb(0, 168, 107);
+    transition: color 0.1s linear;
+}
+
+.greenlink:hover {
+    text-decoration: none;
+    color: black;
+}
