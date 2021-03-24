@@ -56,7 +56,8 @@
                 else {return 0;}
             });
             
-            for (i = 0; i < quotes.length; i++) {
+            var i = 0;
+            while (i < quotes.length) {
                 var soundboard = document.querySelector("#soundboard");
                 var template = document.querySelector('#new_row');
                 var clone = template.content.cloneNode(true);
@@ -72,7 +73,6 @@
                     i++;
                     j++;
                 }
-                i--;
 
                 clone.querySelector("#row").innerHTML = innerhtml;
                 soundboard.appendChild(clone);
