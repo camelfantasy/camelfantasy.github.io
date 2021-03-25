@@ -34,7 +34,7 @@
         <br>
         <div class="container">
             <div style="font-size:24px; font-weight:bold" align="center">Quotes from UMD Professor Kruskal</div>
-            <div align="center">CMSC451 Spring 2021</div>
+            <div align="center">CMSC451 spring 2021 & other semesters/classes</div>
             <br>
             <div class="soundboard" id="soundboard">
                 <template id="new_row">
@@ -59,10 +59,11 @@
                 {name:'aaaAAAaaa', file:'aaaAAAaaa.m4a'},
                 {name:'click', file:'click.m4a'},
                 {name:'one way signs', file:'one-way.m4a'},
+                {name:'F', file:'KruskalFInChat.m4a'},
             ];
             quotes.sort(function (a, b) {
-                if (a.name < b.name) {return -1;}
-                else if (a.name > b.name) {return 1;}
+                if (a.name.toLowerCase() < b.name.toLowerCase()) {return -1;}
+                else if (a.name.toLowerCase() > b.name.toLowerCase()) {return 1;}
                 else {return 0;}
             });
             
