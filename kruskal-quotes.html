@@ -36,13 +36,34 @@
             <div style="font-size:24px; font-weight:bold" align="center">No Context Quotes from UMD Professor Kruskal</div>
             <div align="center">CMSC451 Spring 2021 & other semesters/classes</div>
             <br>
-            <div class="soundboard" id="soundboard">
-                <template id="new_row">
-                    <div id="row" class="row">
+            <div class="soundboard">
+                <div id="section1">
+                    <template id="new_row">
+                        <div id="row" class="row">
+                        </div>
+                    </template>
+                </div>
+                <hr style="border-top: 1px solid rgba(0,0,0,.50)">
+                <div id="section2">
+                    <div class="row">
+                        <div class="col-lg-2 col-md-4 col-sm-6" style="padding:24px" align="center">
+                            <img src="images/button_blue.png" style="max-width:50%; max-height:50%" onclick="playall()">
+                            <br>
+                            Play all
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6" style="padding:24px" align="center">
+                            <img src="images/button_blue.png" style="max-width:50%; max-height:50%" onclick="stop()">
+                            <br>
+                            Stop
+                        </div>
                     </div>
-                </template>
+                </div>
             </div>
+            <br>
+            <div style="font-size:14px">Disclaimer: this page is not meant to be taken seriously.</div>
+            <br>
         </div>
+        <div id="audio"></div>
         <script>
             var quotes = [
                 {name:'aaaaaaaaaa', file:'aaaaaaaaaa.m4a'},
@@ -61,6 +82,13 @@
                 {name:'one way signs', file:'one-way.m4a'},
                 {name:'F', file:'KruskalFinChat.m4a'},
                 {name:'hat', file:'hat.m4a'},
+                {name:'aiaiai', file:'aiaiai.m4a'},
+                {name:'how?', file:'HowDidThisHappen.m4a'},
+                {name:'think', file:'think.m4a'},
+                {name:'confused', file:'confused.m4a'},
+                {name:'proofs 3', file:'Proofs3.m4a'},
+                {name:'run over', file:'RunOver.m4a'},
+                {name:'serial killer', file:'serialkiller.m4a'},
             ];
             quotes.sort(function (a, b) {
                 if (a.name.toLowerCase() < b.name.toLowerCase()) {return -1;}
@@ -70,7 +98,8 @@
             
             var i = 0;
             while (i < quotes.length) {
-                var soundboard = document.querySelector("#soundboard");
+                var audio = document.querySelector("#audio");
+                var section = document.querySelector("#section1");
                 var template = document.querySelector('#new_row');
                 var clone = template.content.cloneNode(true);
                 var innerhtml = "";
@@ -82,17 +111,37 @@
                                         <br>
                                         ` + quotes[i].name + `
                                     </div>`;
+                    
+                    audio.innerHTML += `   <audio id="` + quotes[i].file + `">
+			                        <source src="audio/` + quotes[i].file + `" type="audio/mpeg">
+                                </audio>`;
+
                     i++;
                     j++;
                 }
 
                 clone.querySelector("#row").innerHTML = innerhtml;
-                soundboard.appendChild(clone);
+                section.appendChild(clone);
             }
 
             function play(file) {
-                var audio = new Audio('audio/' + file);
+                var audio = document.getElementById(file);
                 audio.play();
+            }
+
+            function playall() {
+                var audio = document.getElementsByTagName('audio');
+                for (let x of audio) {
+                    x.play();
+                }
+            }
+
+            function stop() {
+                var audio = document.getElementsByTagName('audio');
+                for (let x of audio) {
+                    x.pause();
+                    x.currentTime = 0;
+                }
             }
         </script>
     </body>
