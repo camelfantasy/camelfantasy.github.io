@@ -47,12 +47,12 @@
                 <div id="section2">
                     <div class="row">
                         <div class="col-lg-2 col-md-4 col-sm-6" style="padding:24px" align="center">
-                            <img src="images/button_blue.png" style="max-width:50%; max-height:50%" onclick="playall()">
+                            <img src="images/button_blue.png" style="max-width:50%; max-height:50%; cursor:pointer" onclick="playall()">
                             <br>
                             Play all
                         </div>
                         <div class="col-lg-2 col-md-4 col-sm-6" style="padding:24px" align="center">
-                            <img src="images/button_blue.png" style="max-width:50%; max-height:50%" onclick="stop()">
+                            <img src="images/button_blue.png" style="max-width:50%; max-height:50%; cursor:pointer" onclick="stop()">
                             <br>
                             Stop
                         </div>
@@ -107,7 +107,7 @@
                 var j = 0;
                 while (j < 6 && i < quotes.length) {
                     innerhtml += `  <div class="col-lg-2 col-md-4 col-sm-6" style="padding:24px" align="center">
-                                        <img src="images/button.png" style="max-width:50%; max-height:50%" onclick="play('` + quotes[i].file + `')">
+                                        <img src="images/button.png" style="max-width:50%; max-height:50%; cursor:pointer" onclick="play('` + quotes[i].file + `')">
                                         <br>
                                         ` + quotes[i].name + `
                                     </div>`;
