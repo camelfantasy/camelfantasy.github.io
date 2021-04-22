@@ -52,6 +52,11 @@
                             Play all
                         </div>
                         <div class="col-lg-2 col-md-4 col-sm-6" style="padding:24px" align="center">
+                            <img src="images/button_blue.png" style="max-width:50%; max-height:50%; cursor:pointer" onclick="random()">
+                            <br>
+                            Random
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6" style="padding:24px" align="center">
                             <img src="images/button_blue.png" style="max-width:50%; max-height:50%; cursor:pointer" onclick="stop()">
                             <br>
                             Stop
@@ -69,7 +74,7 @@
                 {name:'aaaaaaaaaa', file:'aaaaaaaaaa.m4a'},
                 {name:'drinks and drugs', file:'DrinksAndDrugs.m4a'},
                 {name:'forget Kruskal', file:'ForgetKruskal.m4a'},
-                {name:'proofs', file:'KruskalProofs.m4a'},
+                {name:'proofs 1', file:'KruskalProofs.m4a'},
                 {name:'shut up', file:'ShutUp.m4a'},
                 {name:'squishy computer', file:'SquishyComputer.m4a'},
                 {name:'yes', file:'Yes.m4a'},
@@ -91,6 +96,10 @@
                 {name:'serial killer', file:'serialkiller.m4a'},
                 {name:'forge 1', file:'forge.m4a'},
                 {name:'forge 2', file:'forge2.m4a'},
+                {name:"I don't know", file:'WhatWeTalkedAbout.m4a'},
+                {name:"what is XD", file:'XD.m4a'},
+                {name:"XD exam", file:'XDExam.m4a'},
+                {name:"yikes", file:'yikes.m4a'},
             ];
             quotes.sort(function (a, b) {
                 if (a.name.toLowerCase() < b.name.toLowerCase()) {return -1;}
@@ -136,6 +145,11 @@
                 for (let x of audio) {
                     x.play();
                 }
+            }
+
+            function random() {
+                var quote = quotes[Math.floor(Math.random() * quotes.length)];
+                play(quote.file)
             }
 
             function stop() {
